@@ -5,22 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './components/nav/nav.component';
-import { EmployeerCardComponent } from './components/employeer-card/employeer-card.component';
-import { EmployeerFormComponent } from './components/employeer-form/employeer-form.component';
+import { CreateEmployeePageComponent } from './pages/create-employee-page/create-employee-page.component';
+import { EmployeesPageComponent } from './pages/employees-page/employees-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    EmployeerCardComponent,
-    EmployeerFormComponent
+    CreateEmployeePageComponent,
+    EmployeesPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
