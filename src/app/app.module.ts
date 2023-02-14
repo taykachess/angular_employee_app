@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './components/nav/nav.component';
 import { CreateEmployeePageComponent } from './pages/create-employee-page/create-employee-page.component';
 import { EmployeesPageComponent } from './pages/employees-page/employees-page.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,12 @@ import { EmployeesPageComponent } from './pages/employees-page/employees-page.co
     CreateEmployeePageComponent,
     EmployeesPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

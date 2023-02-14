@@ -1,1 +1,16 @@
-<p>nav works!</p>
+<nav mat-tab-nav-bar [tabPanel]="tabPanel"  >
+    <div class="flex">
+      <a mat-tab-link  *ngFor="let link of links"
+        [routerLink]="link.route"
+        (click)="activeLink = link.route"
+        [active]="activeLink == link.route"
+        >
+        <span class="title">{{link.title | uppercase}}</span>
+      </a>
+      </div>
+  </nav>
+
+
+
+<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+
