@@ -1,1 +1,42 @@
-<p>employeer-card works!</p>
+<div class="container">
+  <div class="row">
+    Сотрудник №{{index}}
+  </div>
+
+  <div class="row">
+    <div class="row__field">
+      Фамилия
+    </div>
+    <div class="row__field">
+      {{employee.firstName}}
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="row__field">
+      Имя
+    </div>
+    <div class="row__field">
+      {{employee.secondName}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="row__field">
+      Отчество
+    </div>
+    <div class="row__field">
+      {{employee.lastName}}
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <button [disabled]="deleting" (click)="delete(employee.id)" class="btn" mat-button> Удалить сотрудника </button>
+  </div>
+
+  <!-- <div class="">sadfsd</div> -->
+
+</div>

@@ -1,3 +1,4 @@
+import { EmployeeService } from 'src/app/services/employee.service';
 import { IEmployee } from '../../models/employee';
 import { Component, Input } from '@angular/core';
 
@@ -7,5 +8,18 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./employee-card.component.scss'],
 })
 export class EmployeeCardComponent {
-  @Input() employees: IEmployee[] = [];
+  @Input() employee: IEmployee;
+  @Input() index: Number;
+
+  deleting = false;
+
+  constructor(public employeeService: EmployeeService) {}
+
+  delete(id: string | number) {
+    this.deleting = true;
+    this.employeeService.delete({ id }).subscribe(() => {
+      console.log('nice');
+      this.deleting = false;
+    });
+  }
 }

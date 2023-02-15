@@ -18,19 +18,7 @@ color: red;
 
 }
 
-.btn {
-  font-size: 1rem;
-  color: white !important;
-  justify-self: start;
-  align-self: self-start;
-  background:var(--color-theme) ;
 
-  padding: 0.5rem;
-
-  &:disabled{
-    background: gray;
-  }
-}
 
 
 .name {

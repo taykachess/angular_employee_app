@@ -1,3 +1,4 @@
+import { EmployeeCardComponent } from './components/employee-card/employee-card.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
     CreateEmployeePageComponent,
     EmployeesPageComponent,
     EmployeeFormComponent,
+    EmployeeCardComponent,
   ],
   imports: [
     BrowserModule,

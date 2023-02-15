@@ -2,5 +2,7 @@
   <h4 class="title title--margin">
     Список сотрудников
   </h4>
-
+  <div class="list">
+    <app-employee-card class="list__item" *ngFor="let employee of employeeService.employees; index as index" [employee]="employee" [index]="index+1" ></app-employee-card>
+  </div>
 </div>
