@@ -1,4 +1,4 @@
-import { EmployeerFormComponent } from './components/employeer-form/employeer-form.component';
+import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,7 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
     NavComponent,
     CreateEmployeePageComponent,
     EmployeesPageComponent,
-    EmployeerFormComponent,
+    EmployeeFormComponent,
   ],
   imports: [
     BrowserModule,
