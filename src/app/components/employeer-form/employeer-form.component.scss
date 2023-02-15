@@ -1,0 +1,40 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+.input {
+color: red;
+
+}
+
+.label {
+  color: var(--color-theme);
+  font-size: 1rem;
+}
+
+.field {
+  background: white;
+  color: red;
+
+}
+
+.btn {
+  font-size: 1rem;
+  color: white !important;
+  justify-self: start;
+  align-self: self-start;
+  background:var(--color-theme) ;
+
+  padding: 0.5rem;
+}
+
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled)  {
+  background-color: white;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+  border-bottom-color: var(--color-theme);
+  border-width: 2px;
+}
+

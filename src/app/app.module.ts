@@ -1,3 +1,4 @@
+import { EmployeerFormComponent } from './components/employeer-form/employeer-form.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,6 +9,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { CreateEmployeePageComponent } from './pages/create-employee-page/create-employee-page.component';
 import { EmployeesPageComponent } from './pages/employees-page/employees-page.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { MatTabsModule } from '@angular/material/tabs';
     NavComponent,
     CreateEmployeePageComponent,
     EmployeesPageComponent,
+    EmployeerFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
