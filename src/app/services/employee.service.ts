@@ -9,7 +9,7 @@ import { employees as data } from '../data/employee';
 export class EmployeeService {
   constructor() {}
 
-  employees: IEmployee[] = data;
+  employees: IEmployee[] = [];
 
   // В реальном проекте, здесь должно быть обращение к API, а не симуляция
   create(employee: Omit<IEmployee, 'id'>): Observable<IEmployee> {
@@ -20,25 +20,18 @@ export class EmployeeService {
       delay(1000),
       tap((e) => this.employees.push(e))
     );
-
-    // Старая версия
-
-    // return new Observable((observer) => {
-    //   setTimeout(() => {
-    //     this.employees.push(employee);
-    //     observer.next(employee);
-    //   }, 1000);
-    // });
   }
 
   getAll() {
+    // Приходят данные якобы с сервера
+    this.employees = data;
     return of(this.employees).pipe(delay(1000));
   }
 
   delete({ id }: Pick<IEmployee, 'id'>): Observable<IEmployee> {
     // Серверная операция по удалению работника
     const index = this.employees.findIndex((e) => e.id === id);
-    // Сервер возвращает работника
+    // Сервер возвращает работника this.employees[index]
 
     return of(this.employees[index]).pipe(
       delay(1000),

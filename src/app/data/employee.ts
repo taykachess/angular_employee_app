@@ -9,8 +9,8 @@ export const employees: IEmployee[] = [
   },
   {
     id: 2,
-    firstName: 'Иванов',
-    secondName: 'Иван',
-    lastName: 'Иванович',
+    firstName: 'Сергеев',
+    secondName: 'Сергей ',
+    lastName: 'Сергеевич',
   },
 ];
