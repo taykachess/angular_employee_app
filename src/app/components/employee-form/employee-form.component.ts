@@ -8,9 +8,9 @@ import { FormGroup, FormControl, AbstractControl } from '@angular/forms';
   styleUrls: ['./employee-form.component.scss'],
 })
 export class EmployeeFormComponent {
-  employee = new FormGroup<IEmployee<AbstractControl>>({
-    firstName: new FormControl(''),
-    secondName: new FormControl(''),
-    lastName: new FormControl(''),
+  employee = new FormGroup({
+    firstName: new FormControl<string>(''),
+    secondName: new FormControl<string>(''),
+    lastName: new FormControl<string>(''),
   });
 }
