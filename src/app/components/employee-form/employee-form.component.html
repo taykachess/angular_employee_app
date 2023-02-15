@@ -1,18 +1,21 @@
 <form >
-  <mat-form-field  class="field"  >
-    <mat-label class="label">Фамилия</mat-label>
-    <input  matInput placeholder="Иванов" value="Иванов" >
-  </mat-form-field>
 
-  <mat-form-field>
-    <mat-label class="label">Имя</mat-label>
-    <input matInput placeholder="Иван" value="Иван">
-  </mat-form-field>
+  <div class="name" [formGroup]="employee">
+    <mat-form-field  class="field"  >
+      <mat-label class="label">Фамилия</mat-label>
+      <input  matInput placeholder="Иванов" value="Иванов" formControlName="firstName" >
+    </mat-form-field>
 
-  <mat-form-field>
-    <mat-label class="label">Отчество</mat-label>
-    <input matInput placeholder="Иванович" value="Иванович">
-  </mat-form-field>
+    <mat-form-field>
+      <mat-label class="label">Имя</mat-label>
+      <input matInput placeholder="Иван" value="Иван" formControlName="secondName">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label class="label">Отчество</mat-label>
+      <input matInput placeholder="Иванович" value="Иванович" formControlName="lastName">
+    </mat-form-field>
+  </div>
 
   <button class="btn" mat-button> Добавить</button>
 </form>

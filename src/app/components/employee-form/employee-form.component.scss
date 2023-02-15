@@ -29,6 +29,12 @@ color: red;
 }
 
 
+.name {
+  display: flex;
+  flex-direction: column;
+}
+
+
 ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled)  {
   background-color: white;
 }

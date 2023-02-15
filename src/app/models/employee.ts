@@ -1,5 +1,5 @@
-export interface IEmployee {
-  firstName: string;
-  secondName: string;
-  lastName: string;
+export interface IEmployee<T> {
+  firstName: T;
+  secondName: T;
+  lastName: T;
 }

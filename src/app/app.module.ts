@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './components/nav/nav.component';
 import { CreateEmployeePageComponent } from './pages/create-employee-page/create-employee-page.component';
 import { EmployeesPageComponent } from './pages/employees-page/employees-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -27,6 +28,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatTabsModule,
     MatInputModule,
     MatButtonModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
