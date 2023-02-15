@@ -1,9 +1,8 @@
-<form >
+<form [formGroup]="form" (ngSubmit)="submit()" >
 
-  <div class="name" [formGroup]="employee">
     <mat-form-field  class="field"  >
       <mat-label class="label">Фамилия</mat-label>
-      <input  matInput placeholder="Иванов" value="Иванов" formControlName="firstName" >
+      <input  matInput placeholder="Иванов" value="" formControlName="firstName" >
     </mat-form-field>
 
     <mat-form-field>
@@ -15,7 +14,6 @@
       <mat-label class="label">Отчество</mat-label>
       <input matInput placeholder="Иванович" value="Иванович" formControlName="lastName">
     </mat-form-field>
-  </div>
 
-  <button class="btn" mat-button> Добавить</button>
+  <button type="submit" [disabled]="loading" class="btn" mat-button> Добавить</button>
 </form>

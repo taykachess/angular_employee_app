@@ -1,6 +1,6 @@
-import { IEmployee } from '../../models/employee';
+import { EmployeeService } from './../../services/employee.service';
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, AbstractControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-employee-form',
@@ -8,9 +8,28 @@ import { FormGroup, FormControl, AbstractControl } from '@angular/forms';
   styleUrls: ['./employee-form.component.scss'],
 })
 export class EmployeeFormComponent {
-  employee = new FormGroup({
+  constructor(private employeeService: EmployeeService) {}
+
+  loading = false;
+  form = new FormGroup({
     firstName: new FormControl<string>(''),
     secondName: new FormControl<string>(''),
     lastName: new FormControl<string>(''),
   });
+
+  submit() {
+    this.loading = true;
+    this.employeeService
+      .create({
+        firstName: this.form.value.firstName as string,
+        secondName: this.form.value.secondName as string,
+        lastName: this.form.value.lastName as string,
+      })
+      .subscribe((employee) => {
+        this.loading = false;
+        alert(
+          `Сотрудник ${employee.firstName} ${employee.secondName} ${employee.lastName} создан`
+        );
+      });
+  }
 }

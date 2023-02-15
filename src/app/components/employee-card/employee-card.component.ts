@@ -1,5 +1,5 @@
 import { IEmployee } from '../../models/employee';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-employee-card',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./employee-card.component.scss'],
 })
 export class EmployeeCardComponent {
-  employees: IEmployee[] = [];
+  @Input() employees: IEmployee[] = [];
 }

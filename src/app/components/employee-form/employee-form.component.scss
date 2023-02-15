@@ -26,6 +26,10 @@ color: red;
   background:var(--color-theme) ;
 
   padding: 0.5rem;
+
+  &:disabled{
+    background: gray;
+  }
 }
 
 
