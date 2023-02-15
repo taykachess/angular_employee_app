@@ -22,6 +22,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Вопросы
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Можно ли в page component импортировать другой component напрямую, а не через app.module.ts (standalone?)
+
+При использовании Validator в react form не происходит проверки валидации при нажатии кнопки (submit event), можно добавить в ручную валидацию, но выглядит как очень странное поведение)?
+
+Как кастомизировать angular material, кроме как напрямую лезть через dev tools, искать классы, и с ними что-то делать?
+
+TypeScript checking в формах, всмысле связь с model через typescript, ну чтобы не ошибиться с неймингом ?
