@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -6,9 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.scss', '../../app.component.scss'],
 })
 export class NavComponent {
+  activeLink: string;
+
+  constructor(private router: Router) {
+    // Решает проблему: Остаться на той же странице при full reload
+    router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        this.activeLink = e.url;
+      }
+    });
+  }
+
   links: { title: string; route: string }[] = [
     { title: 'Страница 1', route: '/' },
     { title: 'Страница 2', route: '/getAll' },
   ];
-  activeLink: string = this.links[0].route;
 }
