@@ -18,7 +18,6 @@ export class EmployeeCardComponent {
   delete(id: string | number) {
     this.deleting = true;
     this.employeeService.delete({ id }).subscribe(() => {
-      console.log('nice');
       this.deleting = false;
     });
   }

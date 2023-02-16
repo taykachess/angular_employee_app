@@ -4,7 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss', '../../app.component.scss'],
+  styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
   activeLink: string;

@@ -4,7 +4,7 @@ import { EmployeeService } from 'src/app/services/employee.service';
 @Component({
   selector: 'app-employees-page',
   templateUrl: './employees-page.component.html',
-  styleUrls: ['./employees-page.component.scss', '../../app.component.scss'],
+  styleUrls: ['./employees-page.component.scss'],
 })
 export class EmployeesPageComponent {
   loading = false;
