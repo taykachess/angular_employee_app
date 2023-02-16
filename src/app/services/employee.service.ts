@@ -28,7 +28,7 @@ export class EmployeeService {
     return of(this.employees).pipe(delay(1000));
   }
 
-  delete({ id }: Pick<IEmployee, 'id'>): Observable<IEmployee> {
+  delete(id: IEmployee['id']): Observable<IEmployee> {
     // Серверная операция по удалению работника
     const index = this.employees.findIndex((e) => e.id === id);
     // Сервер возвращает работника this.employees[index]
